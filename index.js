@@ -8,6 +8,15 @@ function start (opts) {
   opts = opts || {}
 
   const app = Fastify(opts)
+  
+  app.register(require('./db-connector'), {
+    database: 'assetdb',
+    username: 'asset',
+    password: 'asset',
+    host: 'localhost',
+    path: 'data/mydb.sqlite'
+  })
+  
   app.register(service, opts)
   app.listen(opts.port, (err) => {
     if (err) {
