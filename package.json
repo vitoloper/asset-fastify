@@ -1,0 +1,26 @@
+{
+  "name": "asset-fastify",
+  "version": "0.0.1",
+  "description": "Asset Fastify example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitoloper/asset-fastify.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/vitoloper/asset-fastify/issues"
+  },
+  "homepage": "https://github.com/vitoloper/asset-fastify#readme",
+  "dependencies": {
+    "@vitoloper/matteo-asset-service": "0.0.1",
+    "fastify": "^0.35.3"
+  },
+  "devDependencies": {
+    "tap": "^11.0.0"
+  }
+}
