@@ -1,9 +1,9 @@
 'use strict'
 
 var Asset = require('@vitoloper/matteo-asset-service')
+var fp = require('fastify-plugin')
 
 async function db (fastify, options) {
-  // const url = options.url
   
   const database = options.database
   const username = options.username
@@ -11,12 +11,9 @@ async function db (fastify, options) {
   const host = options.host
   const path = options.path
   
-  // delete options.url
-
-  // const db = await MongoClient.connect(url, options)
   const db = await Asset(database, username, password, host, path)
   
   fastify.decorate('asset', db)
 }
 
-module.exports = db
+module.exports = fp(db)
